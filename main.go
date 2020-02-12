@@ -15,6 +15,7 @@ import (
 )
 
 func run(args []string) int {
+
 	bindAddress := flag.String("ip", "0.0.0.0", "IP address to bind")
 	listenPort := flag.Int("port", 25478, "port number to listen on")
 	debugFlag := flag.Bool("debug", false, "Turn debug on/off")
@@ -36,6 +37,7 @@ func run(args []string) int {
 	if err != nil {
 		logger.Printf("[FATAL] Failed to initialize listener: %v", err)
 	}
+
 	logger.Printf("[INFO] Listening on %v", fmt.Sprintf("%s:%d", *bindAddress, *listenPort))
 	log.Fatal(http.Serve(listener, r))
 	return 0

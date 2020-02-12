@@ -28,4 +28,5 @@ hlowrld --help
 ## Endpoints
 
 `/ --> Hello Dainty Amalia 200`
+
 `/healthz --> 200`
